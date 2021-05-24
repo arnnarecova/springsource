@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:shux="http://www.shux-tech.com/schema/shux"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.shux-tech.com/schema/shux
+        http://www.shux-tech.com/schema/shux/shux.xsd">
+
+    <bean id="mybean"
+        class="com.shux.springsource.biz.impl.MyBeanBizImpl">
+    </bean>
+    <shux:service id="customtag" interfaces="myInterface" ref="thisInterfaces"></shux:service>
+
+</beans>
