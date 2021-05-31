@@ -1,0 +1,5 @@
+spring常用工具类
+CollectionUtils isEmpty //集合工具类，如方法判断集合是否为空，合并集合，是否包含元素等等
+ObjectUtils//对象工具类，如把对象转成数组，对象是否相等，数组的hash值等
+ClassUtils 如ClassUtils.forName(className, this.classLoader);根据文件类型字符串转换成class
+BeanUtils 如BeanUtils.instantiateClass(handlerClass);实例化bean，即通过给定的class实例化对象
