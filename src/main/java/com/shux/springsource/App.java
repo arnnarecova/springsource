@@ -7,6 +7,8 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.core.io.ClassPathResource;
 
+import com.shux.springsource.beanfactory.MyBeanFactory;
+import com.shux.springsource.beanfactory.User;
 import com.shux.springsource.biz.IMyBeanBiz;
 import com.shux.springsource.biz.impl.MyBeanBizImpl;
 import com.shux.springsource.customtag.ServiceBean;
@@ -41,4 +43,15 @@ public class App
         IMyBeanBiz mybeanbiz = factory.getBean("mybean", MyBeanBizImpl.class);
         mybeanbiz.printName("simba");
     }
+    
+    @Test
+    public void testMyfactoryBean() throws Exception {
+    	BeanFactory factory = new XmlBeanFactory(new ClassPathResource("mybeans.xml"));
+    	User mybeanbiz = factory.getBean("myfactorybean", User.class);
+        mybeanbiz.printUsername("simba");
+        System.out.println("-------------------------");
+        MyBeanFactory mybeanFactory = factory.getBean("&myfactorybean", MyBeanFactory.class);
+        mybeanFactory.getObject();
+    }
+    
 }

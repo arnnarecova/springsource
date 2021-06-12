@@ -9,5 +9,4 @@ public class MyBeanBizImpl implements IMyBeanBiz {
 		System.out.println(name);
 		
 	}
-
 }

@@ -10,5 +10,4 @@ public class ShuxNamespaceHandler extends NamespaceHandlerSupport{
 	public void init() {
 		registerBeanDefinitionParser("service",new ServiceBeanDefinitionParser());
 	}
-
 }
