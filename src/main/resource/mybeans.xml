@@ -10,6 +10,13 @@
     </bean>
     
     <bean id="myfactorybean" class="com.shux.springsource.beanfactory.MyBeanFactory"/>
+    
+    <bean id="myBeanPostProcessor" class="com.shux.springsource.beanpost.MyBeanPostProcessor"></bean>
+    
+    <bean id="myInstantiationAwareBeanPostProcessor" class="com.shux.springsource.beanpost.MyInstantiationAwareBeanPostProcessor"/>
+    
+    <bean id="myBeanFactoryPostProcessor" class="com.shux.springsource.beanpost.MyBeanFactoryPostProcessor"/>
+    
     <bean id="userBean" class="com.shux.springsource.beanfactory.User" 
     init-method="init" destroy-method="destroy" scope="singleton" p:username="simba" p:age="30" p:phone="13631254875" p:sex="man"/>
 

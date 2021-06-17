@@ -54,4 +54,12 @@ public class App
         mybeanFactory.getObject();
     }
     
+    @Test
+    public void testPostBeanProcessor() {
+    	BeanFactory factory = new XmlBeanFactory(new ClassPathResource("mybeans.xml"));
+    	
+    	User user = factory.getBean("userBean",User.class);
+    	user.printUsername("simba");
+    }
+    
 }
